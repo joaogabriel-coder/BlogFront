@@ -9,16 +9,13 @@ import { ImageWithFallback } from "./figma/ImageWithFallback";
 
 interface PostCardProps {
   publicacao: Publicacao;
-  comentarios: Comentario[];
-  usuarioAtual: Usuario;
-  isFavorito: boolean;
-  totalFavoritos: number;
+  comentarios?: Comentario[];
+  usuarioAtual?: Usuario;
+  isFavorito?: boolean;
+  totalFavoritos?: number;
   onVerMais?: (id: number) => void;
-  onToggleFavorito?: (publicacaoId: number) => void;
-
-  // AQUI A ASSINATURA CORRETA
+  onToggleFavorito?: (publicacaoId: number) => void
   onAdicionarComentario?: (publicacaoId: number, texto: string) => void;
-
   onVerPerfilUsuario?: (usuarioId: number) => void;
 }
 
@@ -147,7 +144,7 @@ export function PostCard({
                 onChange={(e) => setComentario(e.target.value)}
                 onKeyDown={(e) => {
                   if (e.key === "Enter" && comentario.trim()) {
-                   // handleEnviarComentario(e as any);
+                   
                   }
                 }}
                 className="bg-input-background border-border"
