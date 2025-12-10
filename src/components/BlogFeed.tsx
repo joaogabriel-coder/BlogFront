@@ -79,7 +79,7 @@ export function BlogFeed({
             placeholder="Buscar por título, conteúdo ou autor..."
             value={busca}
             onChange={(e) => setBusca(e.target.value)}
-            className="pl-10 bg-input-background border-border"
+            className="pl-10 bg-input-background border-border text-black"
           />
         </div>
         
