@@ -6,10 +6,8 @@ import axios from "axios";
 const baseURL = import.meta.env.VITE_API_URL || "http://localhost:8000";
 
 const Api = axios.create({
-    // 2. Combine a URL base com o prefixo do Laravel se necessário (opcional)
-    // Se suas rotas são tipo /api/login, use `${baseURL}/api`
-    // Se suas rotas são tipo /login, use `${baseURL}`
-    baseURL: `${baseURL}` // Sugestão: adicione o prefixo /api aqui.
+    baseURL: `${baseURL}` ,
+    withCredentials: true,
 });
 
 // Adiciona o token automaticamente em TODAS as requisições
